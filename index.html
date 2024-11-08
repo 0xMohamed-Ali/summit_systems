@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to ClassCamp</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="logo">
+        </div>
+    </div>
+
+    <div class="success-animation">
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+            <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+            <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+        </svg>
+    </div>
+
+    <button class="theme-switch" onclick="toggleTheme()">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="container">
+        <div class="wave-container">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+
+        <div class="left-section">
+            <h1 style="color: var(--primary-color); margin-bottom: 2rem;">Welcome to ClassCamp</h1>
+            
+            <div class="auth-card">
+                <h2 style="margin-bottom: 1.5rem;">Student Sign In</h2>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="Enter your email" required>
+                        <span class="input-line"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="Enter your password" required>
+                        <span class="input-line"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign In</button>
+                    <br>
+                    <br>
+                    <a class="guest-button" href="main/main.html"> Continue as Guest</a>
+                </form>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-users feature-icon"></i>
+                <h3>Sign in as Admin</h3>
+            </div>
+            <div class="features">
+                <div class="feature-card">
+                    <i class="fas fa-user-shield feature-icon"></i>
+                    <h3>Sign in as a Super User</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <h2>Developed by<a href="../summit/home.html"><img class="logo-img" src="../images/logo.png" alt="ClassCamp Logo"></a>Summit systems</h2>
+        </div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const themeSwitch = document.querySelector('.theme-switch i');
+            
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.removeAttribute('data-theme');
+                themeSwitch.className = 'fas fa-moon';
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeSwitch.className = 'fas fa-sun';
+            }
+        }
+
+        // Login Form Animation
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const successAnimation = document.querySelector('.success-animation');
+            successAnimation.classList.add('active');
+            
+            setTimeout(() => {
+                successAnimation.classList.remove('active');
+                // Add your login logic here
+            }, 2000);
+        });
+
+        // Feature Cards Animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const features = document.querySelectorAll('.feature-card');
+            features.forEach((feature, index) => {
+                feature.style.opacity = '0';
+                feature.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    feature.style.transition = 'all 0.6s ease';
+                    feature.style.opacity = '1';
+                    feature.style.transform = 'translateY(0)';
+                }, 300 * (index + 1));
+            });
+        });
+
+        // Add hover effect to feature cards
+        const featureCards = document.querySelectorAll('.feature-card');
+        featureCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Remove loading screen after content is loaded
+        window.addEventListener('load', () => {
+            const loadingScreen = document.querySelector('.loading-screen');
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 2000);
+        });
+
+    </script>
+</body>
+</html>
