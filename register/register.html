@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - ClassCamp</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="logo">
+        </div>
+    </div>
+
+    <div class="success-animation">
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+            <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+            <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+        </svg>
+    </div>
+
+    <button class="theme-switch" onclick="toggleTheme()">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="container">
+        <div class="wave-container">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+
+        <div class="left-section">
+            <h1 style="color: var(--primary-color); margin-bottom: 2rem;">Join ClassCamp</h1>
+            
+            <div class="auth-card">
+                <h2 style="margin-bottom: 1.5rem;">Create Student Account</h2>
+                <form id="registrationForm">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter your full name" required>
+                        <span class="input-line"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="Enter your email" required>
+                        <span class="input-line"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>Student ID</label>
+                        <input type="text" placeholder="Enter your student ID" required>
+                        <span class="input-line"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="Create a password" required>
+                        <span class="input-line"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>Confirm Password</label>
+                        <input type="password" placeholder="Confirm your password" required>
+                        <span class="input-line"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create Account</button>
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href='login.html'">
+                        Already have an account? Sign In
+                    </button>
+                </form>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-university feature-icon"></i>
+                <h3>Register as Institution</h3>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-chalkboard-teacher feature-icon"></i>
+                <h3>Register as Teacher</h3>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="welcome-text">
+                <h2>Welcome to ClassCamp</h2>
+                <p>Join thousands of students and educators in the next generation of online learning.</p>
+            </div>
+    
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-video"></i>
+                    <h3>Live Classes</h3>
+                    <p>Interactive sessions with real-time feedback</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-book-reader"></i>
+                    <h3>Rich Content</h3>
+                    <p>Access comprehensive study materials</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Community</h3>
+                    <p>Connect with peers and educators</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Certificates</h3>
+                    <p>Earn recognized certifications</p>
+                </div>
+            </div>
+    
+            <div class="testimonial">
+                <img src="/api/placeholder/80/80" alt="Student">
+                <p>"ClassCamp transformed my learning experience. The interactive sessions and supportive community made all the difference in my academic journey."</p>
+                <div class="author">Sarah Johnson</div>
+                <p class="role">Computer Science Student</p>
+            </div>
+    
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>10k+</h3>
+                    <p>Active Students</p>
+                </div>
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Expert Teachers</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1000+</h3>
+                    <p>Courses</p>
+                </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const themeSwitch = document.querySelector('.theme-switch i');
+            
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.removeAttribute('data-theme');
+                themeSwitch.className = 'fas fa-moon';
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeSwitch.className = 'fas fa-sun';
+            }
+        }
+
+        // Registration Form Animation and Validation
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic password matching validation
+            const password = document.querySelectorAll('input[type="password"]')[0].value;
+            const confirmPassword = document.querySelectorAll('input[type="password"]')[1].value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+            
+            const successAnimation = document.querySelector('.success-animation');
+            successAnimation.classList.add('active');
+            
+            setTimeout(() => {
+                successAnimation.classList.remove('active');
+                // Add your registration logic here
+            }, 2000);
+        });
+
+        // Feature Cards Animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const features = document.querySelectorAll('.feature-card');
+            features.forEach((feature, index) => {
+                feature.style.opacity = '0';
+                feature.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    feature.style.transition = 'all 0.6s ease';
+                    feature.style.opacity = '1';
+                    feature.style.transform = 'translateY(0)';
+                }, 300 * (index + 1));
+            });
+        });
+
+        // Add hover effect to feature cards
+        const featureCards = document.querySelectorAll('.feature-card');
+        featureCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Remove loading screen after content is loaded
+        window.addEventListener('load', () => {
+            const loadingScreen = document.querySelector('.loading-screen');
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
