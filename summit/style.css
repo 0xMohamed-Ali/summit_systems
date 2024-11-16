@@ -97,7 +97,7 @@ nav ul li a:hover {
 .hero {
     margin-top: 80px;
     padding: 8rem 5%;
-    background: linear-gradient(135deg, var(--primary) 0%, #1a1b2e 100%);
+    background: linear-gradient(135deg, var(--secondary) 0%, #2D3047 100%);
     color: var(--white);
     text-align: center;
     position: relative;
@@ -115,16 +115,15 @@ nav ul li a:hover {
     opacity: 0.5;
 }
 
-.hero h2 {
+.hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
-    font-weight: 700;
-    line-height: 1.2;
+    animation: fadeIn 1s ease-out;
 }
 
 .hero p {
     font-size: 1.2rem;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto 2rem;
     opacity: 0.9;
 }
@@ -136,7 +135,7 @@ section {
 section h2 {
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--primary);
+    color: #ffffff;
 }
 
 .solutions-grid {
@@ -259,7 +258,7 @@ logo-footer
         display: none;
     }
 
-    .hero h2 {
+    .hero h1 {
         font-size: 2.5rem;
     }
 

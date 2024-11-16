@@ -185,12 +185,13 @@
             box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
         }
 
-        .developer-section{
+        .founder-section{
             display: flex;
             flex-direction: row;
             justify-content: center;
-            background: linear-gradient(140deg, #e3f2fd, #6bb4ef);
+            background: linear-gradient(140deg, #2e364a, #018170);
         }
+
 
         .developer-card {
             border-radius: 20px;
@@ -271,7 +272,6 @@
     background: linear-gradient(135deg, #419D78 0%, #2D3047 100%);
     color: var(--white);
     padding: 3rem 5%;
-    margin-top: 4rem;
 }
 
 .footer-content {
