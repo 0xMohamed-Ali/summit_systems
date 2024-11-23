@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTask</title>
+    <link rel="stylesheet" href="teacher.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1>EduTask</h1>
+            </div>
+            <div class="user-profile">
+                <img src="https://via.placeholder.com/80" alt="Profile Avatar" class="profile-avatar">
+                <h3>John Doe</h3>
+                <p>Teacher</p>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="active"><i class="fas fa-dashboard"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fas fa-upload"></i> Upload Task</a></li>
+                    <li><a href="#"><i class="fas fa-tasks"></i> Open Tasks</a></li>
+                    <li><a href="#"><i class="fas fa-check"></i> Closed Tasks</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Students</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="#" class="logout-btn">Logout</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="header">
+                <button class="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
+                <h2>Dashboard</h2>
+            </header>
+            <div class="content">
+                <section class="tasks-section">
+                    <h3>Task Overview</h3>
+                    <div class="tasks-overview">
+                        <div class="task-card open-tasks">
+                            <h4>Open Tasks</h4>
+                            <p>5 Tasks</p>
+                        </div>
+                        <div class="task-card closed-tasks">
+                            <h4>Closed Tasks</h4>
+                            <p>15 Tasks</p>
+                        </div>
+                        <div class="task-card upcoming-deadlines">
+                            <h4>Upcoming Deadlines</h4>
+                            <p>3 Deadlines</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="upload-section">
+                    <h3>Upload a Task</h3>
+                    <form class="upload-form">
+                        <input type="text" placeholder="Task Title" required>
+                        <textarea placeholder="Task Description" rows="4" required></textarea>
+                        <input type="date" required>
+                        <button type="submit" class="btn-primary">Upload</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

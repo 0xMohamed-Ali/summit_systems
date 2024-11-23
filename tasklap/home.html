@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Modern Task Management</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                    </svg>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-teal-400 text-transparent bg-clip-text">TaskFlow</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-gray-900 transition">Features</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-gray-900 transition">Pricing</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-gray-900 transition">Testimonials</a>
+                    <a href="#contact" class="text-gray-600 hover:text-gray-900 transition">Contact</a>
+                    <a class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition transform hover:scale-105" href="login.html">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="gradient-bg pt-24">
+        <div class="max-w-7xl mx-auto px-4 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h1 class="text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                        Manage Tasks with <span class="text-blue-600">Elegance</span> and <span class="text-teal-600">Efficiency</span>
+                    </h1>
+                    <p class="text-xl text-gray-700 mb-8">
+                        Stay organized, boost productivity, and achieve your goals with our intuitive task management platform.
+                    </p>
+                    <div class="flex space-x-4">
+                        <button class="bg-white text-blue-500 px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition text-lg font-semibold transform hover:scale-105">
+                            Start Free Trial
+                        </button>
+                        <button class="bg-gray-900 text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition text-lg font-semibold transform hover:scale-105">
+                            Watch Demo
+                        </button>
+                    </div>
+                    <div class="mt-8 flex items-center space-x-4">
+                        <p class="text-gray-600">Trusted by Professional teams</p>
+                    </div>
+                </div>
+                <div class="floating-nav" data-aos="fade-left">
+                    <img src="/api/placeholder/600/400" alt="TaskFlow Dashboard" class="rounded-lg shadow-2xl"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats-gradient text-white py-12 -mt-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">100+</h3>
+                    <p>Active Users</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">will be 100%</h3>
+                    <p>Satisfaction Rate</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">2+</h3>
+                    <p>Tasks Completed</p>
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold mb-2">1</h3>
+                    <p>Campus</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div id="features" class="max-w-7xl mx-auto px-4 py-20">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Features that Empower You</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Discover how TaskFlow can transform your workflow and boost team productivity.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Feature Cards -->
+            <div class="feature-card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up">
+                <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Smart Task Organization</h3>
+                <p class="text-gray-600 mb-4">Organize tasks with intuitive categories, tags, and priority levels.</p>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        Drag-and-drop interface
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        Custom categories
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        Priority management
+                    </li>
+                </ul>
+            </div>
+
+            <div class="feature-card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Advanced Analytics</h3>
+                <p class="text-gray-600 mb-4">Track performance and gain insights with detailed analytics.</p>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        Real-time dashboards
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        Custom reports
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        Trend analysis
+                    </li>
+                </ul>
+            </div>
+
+            <div class="feature-card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-14 h-14 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-8 h-8 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Team Collaboration</h3>
+                <p class="text-gray-600 mb-4">Work together seamlessly with powerful collaboration tools.</p>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        Real-time updates
+                    </li><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                Team messaging
+            </li>
+            <li class="flex items-center">
+                <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                File sharing
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<!-- Pricing Section -->
+<div id="pricing" class="bg-gray-50 py-20">
+<div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">Simple, Transparent Pricing</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Choose the perfect plan for your team's needs</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+        <!-- Free Plan -->
+        <div class="pricing-card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up">
+            <h3 class="text-2xl font-bold mb-4">Free</h3>
+            <div class="mb-6">
+                <span class="text-4xl font-bold">$0</span>
+                <span class="text-gray-600">/month</span>
+            </div>
+            <ul class="space-y-4 mb-8">
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Up to 5 team members
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Basic task management
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Limited storage
+                </li>
+            </ul>
+            <button class="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition">
+                Get Started
+            </button>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="pricing-card bg-white p-8 rounded-xl shadow-xl border-2 border-blue-500 relative" data-aos="fade-up" data-aos-delay="100">
+            <div class="absolute top-0 right-0 bg-blue-500 text-white px-4 py-1 rounded-bl-lg rounded-tr-lg text-sm font-semibold">
+                POPULAR
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Pro</h3>
+            <div class="mb-6">
+                <span class="text-4xl font-bold">$29</span>
+                <span class="text-gray-600">/month</span>
+            </div>
+            <ul class="space-y-4 mb-8">
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Unlimited team members
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Advanced analytics
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    100GB storage
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Priority support
+                </li>
+            </ul>
+            <button class="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition">
+                Start Free Trial
+            </button>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="pricing-card bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-2xl font-bold mb-4">Enterprise</h3>
+            <div class="mb-6">
+                <span class="text-4xl font-bold">Custom</span>
+            </div>
+            <ul class="space-y-4 mb-8">
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Custom solutions
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Dedicated support
+                </li>
+                <li class="flex items-center">
+                    <svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Custom integration
+                </li>
+            </ul>
+            <button class="w-full bg-gray-900 text-white py-3 rounded-lg hover:bg-gray-800 transition">
+                Contact Sales
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Testimonials Section -->
+<div id="testimonials" class="py-20">
+<div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">What Our Users Say</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Don't just take our word for it</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+        <!-- Testimonial Cards -->
+        <div class="testimonial-card p-8 rounded-xl shadow-lg" data-aos="fade-up">
+            <div class="flex items-center mb-6">
+                <img src="/api/placeholder/48/48" alt="User" class="w-12 h-12 rounded-full"/>
+                <div class="ml-4">
+                    <h4 class="font-semibold">Sarah Johnson</h4>
+                    <p class="text-gray-600">Product Manager</p>
+                </div>
+            </div>
+            <p class="text-gray-700">"TaskFlow has transformed how our team works. The intuitive interface and powerful features have boosted our productivity significantly."</p>
+        </div>
+
+        <div class="testimonial-card p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center mb-6">
+                <img src="/api/placeholder/48/48" alt="User" class="w-12 h-12 rounded-full"/>
+                <div class="ml-4">
+                    <h4 class="font-semibold">Michael Chen</h4>
+                    <p class="text-gray-600">Tech Lead</p>
+                </div>
+            </div>
+            <p class="text-gray-700">"The analytics features are incredible. We can now track our team's performance and make data-driven decisions easily."</p>
+        </div>
+
+        <div class="testimonial-card p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-center mb-6">
+                <img src="/api/placeholder/48/48" alt="User" class="w-12 h-12 rounded-full"/>
+                <div class="ml-4">
+                    <h4 class="font-semibold">Emma Davis</h4>
+                    <p class="text-gray-600">Startup Founder</p>
+                </div>
+            </div>
+            <p class="text-gray-700">"As a startup founder, TaskFlow has been invaluable. It's helped us stay organized and focused on what matters most."</p>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Contact Section -->
+<div id="contact" class="bg-gray-50 py-20">
+<div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Have questions? We're here to help.</p>
+    </div>
+    <div class="max-w-2xl mx-auto">
+        <form class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-gray-700 mb-2">Name</label>
+                    <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition"/>
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition"/>
+                </div>
+            </div>
+            <div>
+                <label class="block text-gray-700 mb-2">Message</label>
+                <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition"></textarea>
+            </div>
+            <button class="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition">
+                Send Message
+            </button>
+        </form>
+    </div>
+</div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="max-w-7xl mx-auto px-4">
+    <div class="grid md:grid-cols-4 gap-8">
+        <div>
+            <div class="flex items-center space-x-2 mb-6">
+                <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                </svg>
+                <span class="text-2xl font-bold">TaskFlow</span>
+            </div>
+            <p class="text-gray-400">Modern task management for modern teams</p>
+        </div>
+        <div>
+            <h4 class="text-lg font-semibold mb-4">Product</h4>
+            <ul class="space-y-2">
+                <li><a href="#features" class="text-gray-400 hover:text-white transition">Features</a></li>
+                <li><a href="#pricing" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition">API</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-lg font-semibold mb-4">Company</h4>
+            <ul class="space-y-2">
+                <li><a href="#" class="text-gray-400 hover:text-white transition">About</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition">Careers</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-lg font-semibold mb-4">Support</h4>
+            <ul class="space-y-2">
+                <li><a href="#" class="text-gray-400 hover:text-white transition">Help Center</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white transition">Documentation</a></li>
+                <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="border-t border-gray-800 mt-12 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400">&copy; 2024 TaskFlow. All rights reserved.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="text-gray-400 hover:text-white transition">
+                    Privacy Policy
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition">
+                    Terms of Service
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition">
+                    Cookie Policy
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+
+<script>
+    // Initialize AOS (Animate On Scroll)
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+    });
+</script>
+
+</body>
+</html>

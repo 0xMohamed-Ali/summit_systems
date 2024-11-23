@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTask - Modern Task Management Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tasklap.css">
+</head>
+<body>
+    <div class="app-container">
+        <main class="main-content">
+            <div id="loginPage" class="login-page">
+                <div class="login-container">
+                    <div class="login-header">
+                        <h2>Welcome to EduTask</h2>
+                        <p>Please select your role to continue</p>
+                    </div>
+                    <div class="login-cards">
+                        <div class="login-card" onclick="window.location.href='student.html'">
+                            <i class="fas fa-user-graduate"></i>
+                            <h3>Student Login</h3>
+                        </div>
+                        <div class="login-card" onclick="window.location.href='teacher.html'">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <h3>Teacher Login</h3>
+                        </div>
+                    </div>
+                    <div id="loginForm" class="login-form"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -8,6 +8,23 @@
     --black: #222222;
 }
 
+.cta {
+    background-color: #419D78;
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.cta:hover {
+    background-color: #368C68;
+    transform: translateY(-2px);
+}
+
 /* Hero Section */
 .careers-hero {
     margin-top: 80px;
