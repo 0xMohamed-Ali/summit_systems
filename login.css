@@ -11,14 +11,18 @@
 }
 
 [data-theme="dark"] {
-    --primary-color: #6366f1;
-    --primary-dark: #4f46e5;
-    --secondary-color: #1e293b;
+    --primary-color: #5758a0;
+    --primary-dark: #348acf;
+    --secondary-color: #323a47;
+    --accent-color:#1e293b;
     --text-color: #f8fafc;
     --bg-color: #0f172a;
     --card-bg: #1e293b;
     --shadow-color: rgba(0, 0, 0, 0.3);
     --wave-color: rgba(99, 102, 241, 0.1);
+    .theme-switch .fa-sun {
+        color: white;
+    }
 }
 
 * {
@@ -29,6 +33,7 @@
 }
 
 body {
+    font-family: "Inter", sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
