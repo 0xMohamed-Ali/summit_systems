@@ -205,11 +205,18 @@ nav a:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
+.feature-header-forCodeLab {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
 
 .feature-header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
@@ -231,6 +238,7 @@ nav a:hover {
     font-size: 1.8rem;
     color: var(--primary-color);
     margin: 0;
+    
 }
 
 .feature-content {
