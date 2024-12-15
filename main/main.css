@@ -21,7 +21,7 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #22535b, #0e899f);
+    background: linear-gradient(135deg, #258291, #0e899f);
     padding: 1rem var(--spacing);
     position: fixed;
     width: 100%;
@@ -61,6 +61,14 @@ header {
     font-weight: bold;
 }
 
+.taskflow-logo{
+    display: flex;
+    align-items: center;
+    background-color: #1f2937;
+    padding: 0.5rem 1rem;
+    border: solid 2px #083c3f;
+    border-radius: 25px;
+}
 nav ul {
     list-style: none;
     display: -webkit-flex;
