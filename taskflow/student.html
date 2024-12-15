@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTask - Student Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="student.css">
+</head>
+<body>
+    <div class="app-container">
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h1><i class="fas fa-graduation-cap"></i> EduTask</h1>
+            </div>
+            <div class="sidebar-content">
+                <div id="userProfile" class="user-profile">
+                    <!-- Profile info will be inserted here -->
+                </div>
+                <nav class="sidebar-nav">
+                    <ul id="navLinks"></ul>
+                </nav>
+            </div>
+            <div class="sidebar-footer">
+                <button onclick="window.location.href='index.html'" class="btn-logout">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div id="dashboardContainer" class="dashboard-container">
+                <header class="top-bar">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search tasks..." id="searchInput">
+                    </div>
+                    <div class="top-bar-actions">
+                        <button class="btn-notification" onclick="toggleNotifications()">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge" id="notificationCount">0</span>
+                        </button>
+                        <div class="notifications-dropdown" id="notificationsDropdown"></div>
+                    </div>
+                </header>
+
+                <div class="dashboard-content">
+                    <div class="stats-container" id="statsContainer"></div>
+                    <div id="studentDashboard" class="dashboard-section">
+                        <div class="task-creation-card">
+                            <h3><i class="fas fa-plus-circle"></i> Create New Task</h3>
+                            <form id="newTaskForm" class="task-form">
+                                <!-- Task creation form content -->
+                                <div class="form-group">
+                                    <label for="taskTitle">Task Title</label>
+                                    <input type="text" id="taskTitle" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="taskSubject">Subject</label>
+                                    <select id="taskSubject" required>
+                                        <option value="">Select Subject</option>
+                                        <option value="mathematics">Mathematics</option>
+                                        <option value="science">Science</option>
+                                        <option value="programming">Programming</option>
+                                        <option value="literature">Literature</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="taskDescription">Description</label>
+                                    <textarea id="taskDescription" rows="4" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Due Date</label>
+                                    <input type="date" id="taskDueDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Priority</label>
+                                    <select id="taskPriority" required>
+                                        <option value="low">Low</option>
+                                        <option value="medium">Medium</option>
+                                        <option value="high">High</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Attachments</label>
+                                    <div class="file-upload">
+                                        <input type="file" id="taskAttachment" multiple>
+                                        <label for="taskAttachment">
+                                            <i class="fas fa-cloud-upload-alt"></i>
+                                            Drop files here or click to upload
+                                        </label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn-submit">
+                                    <i class="fas fa-paper-plane"></i> Submit Task
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="tasks-overview">
+                            <div class="tasks-header">
+                                <h3><i class="fas fa-tasks"></i> My Tasks</h3>
+                                <div class="tasks-filter">
+                                    <select id="taskStatusFilter">
+                                        <option value="all">All Tasks</option>
+                                        <option value="pending">Pending Review</option>
+                                        <option value="reviewed">Reviewed</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="studentTaskList" class="tasks-grid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="taskDetailModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTaskTitle"></h2>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalTaskContent"></div>
+            <div class="modal-footer" id="modalTaskActions"></div>
+        </div>
+    </div>
+
+    <div id="notificationToast" class="notification-toast"></div>
+    <script src="student.js"></script>
+</body>
+</html>

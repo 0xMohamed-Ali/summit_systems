@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTask - Modern Task Management Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <style>
+        .login-form {
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 400px;
+            display: none;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #374151;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #D1D5DB;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #3B82F6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 0.75rem 1.5rem;
+            background-color: #3B82F6;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-login:hover {
+            background-color: #2563EB;
+        }
+
+        .login-options {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .forgot-password {
+            color: #6B7280;
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        .forgot-password:hover {
+            color: #374151;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <main class="main-content">
+            <div id="loginPage" class="login-page">
+                <div class="login-container">
+                    <div class="login-header">
+                        <h2>Welcome to EduTask</h2>
+                        <p>Please select your role to continue</p>
+                    </div>
+                    <div class="login-cards">
+                        <div class="login-card" onclick="showLoginForm('student')">
+                            <i class="fas fa-user-graduate"></i>
+                            <h3>Student Login</h3>
+                        </div>
+                        <div class="login-card" onclick="showLoginForm('teacher')">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <h3>Teacher Login</h3>
+                        </div>
+                    </div>
+                    <div id="loginForm" class="login-form">
+                        <form onsubmit="handleLogin(event)">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" required>
+                            </div>
+                            <button type="submit" class="btn-login">
+                                <i class="fas fa-sign-in-alt"></i> Login
+                            </button>
+                            <div class="login-options">
+                                <a href="#" class="forgot-password">Forgot your password?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        let currentRole = null;
+
+        function showLoginForm(role) {
+            currentRole = role;
+            const loginForm = document.getElementById('loginForm');
+            loginForm.style.display = 'block';
+            
+            // Update header text based on role
+            const headerText = document.querySelector('.login-header h2');
+            headerText.textContent = `${role.charAt(0).toUpperCase() + role.slice(1)} Login`;
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Here you would typically make an API call to authenticate
+            // For demonstration, we'll just redirect based on role
+            if (currentRole === 'student') {
+                window.location.href = 'student.html';
+            } else if (currentRole === 'teacher') {
+                window.location.href = 'teacher.html';
+            }
+        }
+    </script>
+</body>
+</html>
