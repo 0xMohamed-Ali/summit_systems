@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="codelab.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
@@ -17,7 +18,11 @@
     <header>
         <nav class="nav-container">
             <div class="header-logo">
-                <a href="index.html" class="logo">
+                <a href="main.html" class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h2>ClassCamp</h2>
+                </a>
+                <a href="index.html" class="codelab-logo">
                     <img class="logo-img" src="../images/codelab.png" alt="CodeLab Logo">
                     <h1 class="logo-text">Code<span class="logo-text-highlight">Lab</span></h1>
                 </a>
@@ -26,7 +31,6 @@
                 <a href="#" class="nav-link active">Home</a>
                 <a href="#" class="nav-link">Browse</a>
                 <a href="#" class="nav-link">Create</a>
-                <button class="btn btn-primary">Sign In</button>
             </div>
         </nav>
     </header>
@@ -36,9 +40,23 @@
             <div class="hero-content">
                 <h2>Share Code. Learn Together.</h2>
                 <p>Join our community of developers sharing knowledge and code snippets.</p>
-                <button class="btn btn-large">Get Started</button>
+                <button id="toggleBtn" class="btn">Open Code Panel</button>
             </div>
         </section>
+
+        <div class="btn-container">            
+            <div id="codePanel">
+                <select id="languageSelect">
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="sql">SQL</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                </select>
+                <textarea id="codeInput" placeholder="Paste your code here..."></textarea>
+                <button id="shareBtn" class="btn">Share Code</button>
+            </div>
+        </div>
 
         <section class="snippets-grid">
             <div class="container">
@@ -94,8 +112,40 @@ public class Main {
                             <button class="btn btn-primary">Run Code</button>
                         </div>
                     </article>
+<!-- 
+                    <article class="code-snippet-card">
+                        <div class="card-header">
+                            <div class="card-meta">
+                                <h3>Java Hello World</h3>
+                                <span class="author">by Smith</span>
+                                <span class="language-tag">Java</span>
+                            </div>
+                            <button class="btn-icon" aria-label="Save snippet">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                            </button>
+                        </div>
+                        <div class="code-snippet" data-language="java">
+                            <pre>
+                                <code>
+                                    <div class="code-snippet" id="snippetContainer">
+                                    </div>
+                                </code>
+                            </pre>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-secondary">Copy Code</button>
+                            <button class="btn btn-primary">Run Code</button>
+                        </div>
+                    </article> -->
+
+
                 </div>
             </div>
+
+        </div>
+    </div>
+
+
         </section>
     </main>
 

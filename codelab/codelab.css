@@ -65,14 +65,37 @@ header {
   padding: var(--spacing-sm) var(--spacing-md);
   max-width: 1200px;
   margin: 0 auto;
+  height: 6rem;
 }
 
-.logo {
+.header-logo{
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: 1rem;
+}
+.codelab-logo{
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 8px;
+  border: 1px solid #242a3284;
+  border-radius: 25px;
+  background: #1f2937;
   text-decoration: none;
   transition: var(--transition-normal);
+}
+.logo {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .logo:hover {
@@ -80,8 +103,8 @@ header {
 }
 
 .logo-img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 12px;
   box-shadow: var(--shadow-sm);
 }
@@ -93,7 +116,7 @@ header {
 }
 
 .logo-text-highlight {
-  color: var(--accent);
+  color: #f96c06;
 }
 
 .nav-links {
@@ -285,6 +308,68 @@ footer img{
   height: 5rem;
   width: 5rem;
 }
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#codePanel {
+  display: none;
+  background-color: white;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#codePanel.active {
+  display: block;
+}
+
+#codeInput {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+/* .btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+} */
+
+/* .btn:hover {
+  background-color: #45a049;
+} */
+
+#shareBtn {
+  background-color: #2196F3;
+}
+
+#shareBtn:hover {
+  background-color: #0b7dda;
+}
+
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-links {
