@@ -64,11 +64,16 @@ header {
 .taskflow-logo{
     display: flex;
     align-items: center;
-    background-color: #1f2937;
+    background-color: #ffffff;
     padding: 0.5rem 1rem;
-    border: solid 2px #083c3f;
+    border: solid 2px #fdfdfd;
     border-radius: 25px;
 }
+
+.logo-text{
+    color: #0e899f;
+}
+
 nav ul {
     list-style: none;
     display: -webkit-flex;
