@@ -3,15 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const codePanel = document.getElementById('codePanel');
     const codeInput = document.getElementById('codeInput');
     const shareBtn = document.getElementById('shareBtn');
-    const languageSelect = document.getElementById('languageSelect'); // Assuming this exists
-
-    // Toggle Code Panel Visibility
-    toggleBtn.addEventListener('click', () => {
-        codePanel.classList.toggle('active');
-        toggleBtn.textContent = codePanel.classList.contains('active') 
-            ? 'Close Code Panel' 
-            : 'Open Code Panel';
-    });
+    const languageSelect = document.getElementById('languageSelect');
 
     // Toast Notification System
     function showToast(message) {
@@ -60,13 +52,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const copyButton = card.querySelector('.btn-secondary');
         copyButton.addEventListener('click', function() {
             const codeBlock = card.querySelector('code');
-            const text = codeBlock.textContent;
+            const text = codeBlock.textContent.trim();
             
             navigator.clipboard.writeText(text).then(() => {
-                const originalText = this.textContent;
                 this.textContent = 'Copied!';
+                showToast('Code copied to clipboard');
+                
                 setTimeout(() => {
-                    this.textContent = originalText;
+                    this.textContent = 'Copy Code';
                 }, 2000);
             }).catch(err => {
                 console.error('Failed to copy code:', err);
@@ -113,6 +106,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Initial setup to attach listeners to existing snippet cards
+    document.querySelectorAll('.code-snippet-card').forEach(card => {
+        attachSnippetCardListeners(card);
+    });
+
+    // Toggle Code Panel Visibility
+    toggleBtn.addEventListener('click', () => {
+        codePanel.classList.toggle('active');
+        toggleBtn.textContent = codePanel.classList.contains('active') 
+            ? 'Close Code Panel' 
+            : 'Open Code Panel';
+    });
 
     // Share Button Functionality
     shareBtn.addEventListener('click', () => {
