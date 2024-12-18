@@ -61,6 +61,8 @@ header {
     font-weight: bold;
 }
 
+
+
 .taskflow-logo{
     display: flex;
     align-items: center;
@@ -189,8 +191,8 @@ nav a:hover {
 }
 
 .codelab-navbar-logo{
-    height: 40px;
-    width: 40px;
+    height:40px;
+    width:40px;
     margin-right: -5px;
     border-radius: 50%;
 }
